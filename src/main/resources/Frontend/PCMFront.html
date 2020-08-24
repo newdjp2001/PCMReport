@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>PCM Result</title>
+<style>
+.Design{
+	border : 5px outset red;
+	background-color:lightblue;
+	text-align:center;
+	}
+td, th {
+	  border: 1px solid #000000;
+	  text-align: center;
+	  padding: 8px;
+	}
+table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 100%;
+	  align : center;
+	}
+</style>
+</head>
+<body bgcolor="darkblue">
+<br>
+<br>
+<div class="Design">
+<table>
+<tr align="center">
+<th> Physics </th>
+<th> Chemistry </th>
+<th> Mathematics </th>
+<th> Total </th>
+<th> Grade </th>
+</tr>
+<tr align="center" bgcolor="white">
+<td th:text="${result.physics}">  </td>
+<td th:text="${result.chemistry}">  </td>
+<td th:text="${result.math}"> </td>
+<td th:text="${result.total}">  </td>
+<td th:text="${result.grade}">  </td>
+</tr>
+</table>
+</div>
+</body>
+</html>
