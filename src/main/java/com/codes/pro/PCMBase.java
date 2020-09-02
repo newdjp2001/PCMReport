@@ -8,31 +8,29 @@ public class PCMBase {
 	private int total;
 	private	char grade;
 	
-	private int temp;
-	private int avg;
 	public int getPhysics() {
 		return physics;
 	}
-	public void setPhysics(int physics) {
-		this.physics = physics;
+	public void setPhysics(int Physics) {
+		this.physics = Physics;
 	}
 	public int getChemistry() {
 		return chemistry;
 	}
-	public void setChemistry(int chemistry) {
-		this.chemistry = chemistry;
+	public void setChemistry(int Chemistry) {
+		this.chemistry = Chemistry;
 	}
 	public int getMath() {
 		return math;
 	}
-	public void setMath(int math) {
-		this.math = math;
+	public void setMath(int Math) {
+		this.math = Math;
 	}
 	public int getTotal() {
 		return total;
 	}
-	public void setTotal(int total) {
-		this.total = total;
+	public void setTotal(int Total) {
+		this.total = Total;
 	}
 	public char getGrade() {
 		return grade;
@@ -40,18 +38,7 @@ public class PCMBase {
 	public void setGrade(char grade) {
 		this.grade = grade;
 	}
-	public int getTemp() {
-		return temp;
-	}
-	public void setTemp(int temp) {
-		this.temp = temp;
-	}
-	public int getAvg() {
-		return avg;
-	}
-	public void setAvg(int avg) {
-		this.avg = avg;
-	}
+	
 }
 	
 

@@ -29,7 +29,7 @@ table {
 <div class="Design">
  <h1>STUDENT REPORT CARD:</h1>
 <table>
-<tr align="center">
+<tr align="center" bgcolor="lightgreen">
 <th> Physics </th>
 <th> Chemistry </th>
 <th> Mathematics </th>
@@ -44,6 +44,75 @@ table {
 <td th:text="${result.grade}">  </td>
 </tr>
 </table>
+<script type="text/javascript">
+    function calc()
+    {
+
+  	  var x = document.forms["form1"]["Physics"].value;
+  	  if (x == "") {
+  		  alert('Physics marks must be filled out');
+  		  return false;
+  	    
+  	  }
+  	  var x = document.forms["form1"]["Chemistry"].value;
+  	  if (x == "") {
+  		  alert('Chemistry marks must be filled out');
+  		  return false;
+  	    
+  	  }
+  	  var x = document.forms["form1"]["Math"].value;
+  	  if (x == "") {
+  		  alert('Math marks must be filled out');
+  		  return false;}
+  		  
+       form=document.getElementById("form1");
+       Physics=form.Physics.value;
+       Chemistry=form.Chemistry.value;
+       Math=form.Math.value;
+       
+       total=parseInt(Physics)+parseInt(Chemistry)+parseInt(Math);
+     
+       form.avg.value= parseInt(total)/3; 
+       
+       if(Physics<35||Chemistry<35||Math<35)
+    	   {form.per.value="NA";}
+       else
+    	   {form.per.value=((parseInt(total)*100)/300);}
+ 	         
+       if(Physics<35||Chemistry<35||Math<35)
+       	   { form.result.value="Fail";}
+       else 
+       	   {form.result.value="Pass";}
+           
+
+
+    }
+</script>
+
+<form id="form1">
+  <br /><br /> <h2>PERCENTAGE CALCULATOR</h2> <br /><br />
+
+  Enter the Name :  <input type="text" size="30" name="name"/>
+  
+  <br>
+  <br>
+     
+  Marks in Physics :  <input type="number" size="30" name="Physics" min="0" max="100"/>
+
+  Marks in Chemistry :  <input type="number" size="30" name="Chemistry" min="0" max="100"/>
+
+  Marks in Math :  <input type="number" size="30" name="Math" min="0" max="100"/><br /><br />
+
+ <input type="button" name="btn" value="Calculate" onclick="calc()"/><br /><br/>
+
+  Average Marks : <input type="text" size="30" name="avg"/>
+  Result : <input type="text" size="30" name="result"/>
+  Percentage:<input type="text" size="30" name="per"/><br/><br/>
+ 
+    <input type="reset" name="Btn2" value="Reset"/><br/><br/>
+    
+</form>
+<p>Note:If marks in any subject is less than 35 then the candidate has failed.</p>
 </div>
 </body>
 </html>
